@@ -1,2 +1,2 @@
-input_path: "data/input/sample.csv"
-output_path: "data/output/transformed"
+input_path: "../data/input/sample_data.csv"
+output_path: "../data/output/transformed/"

@@ -10,6 +10,12 @@ from src.utils.logger import get_logger
 def main():
     logger = get_logger("Main")
     spark = SparkSession.builder.appName("PySparkProjectTest1").getOrCreate()
+    # spark = SparkSession.builder \
+    #     .appName("PySparkProjectTest1") \
+    #     .config("spark.hadoop.mapreduce.fileoutputcommitter.marksuccessfuljobs", "false") \
+    #     .config("spark.hadoop.fs.local.impl.disable.cache", "true") \
+    #     .config("spark.hadoop.fs.file.impl.disable.cache", "true") \
+    #     .getOrCreate()
 
     config = load_config("config/config.yaml")
     logger.info("Loaded config: %s", config)
